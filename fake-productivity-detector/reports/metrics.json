@@ -1,0 +1,52 @@
+{
+  "best_model": "Gradient Boosting",
+  "threshold": 0.54,
+  "cv": {
+    "Logistic Regression": {
+      "roc_auc": 0.9555142857142856,
+      "average_precision": 0.9209430060357062,
+      "f1": 0.9377587153878253
+    },
+    "Random Forest": {
+      "roc_auc": 0.9568763736263737,
+      "average_precision": 0.9252007771902768,
+      "f1": 0.9407068727952563
+    },
+    "Gradient Boosting": {
+      "roc_auc": 0.9590637362637363,
+      "average_precision": 0.9277283743125138,
+      "f1": 0.9392812773921516
+    }
+  },
+  "test": {
+    "roc_auc": 0.9521687912087912,
+    "pr_auc": 0.9245731334192767,
+    "precision": 0.9606557377049181,
+    "recall": 0.9015384615384615,
+    "f1": 0.9301587301587302,
+    "fake_prevalence": 0.2708333333333333
+  },
+  "flag_rate_by_archetype": {
+    "fake_busywork": 0.9913,
+    "fake_jiggler": 0.989,
+    "fake_online_idle": 0.9901,
+    "genuine_focused": 0.0,
+    "genuine_meeting_heavy": 0.0,
+    "genuine_slow": 0.0066
+  },
+  "naive_low_activity_rule_f1": 0.36624775583482944,
+  "top_features": {
+    "quality_adjusted_output": 0.008,
+    "mouse_repetitive_ratio": 0.0076,
+    "idle_minutes": 0.0072,
+    "distraction_app_pct": 0.0045,
+    "hours_logged": 0.0038,
+    "mouse_events_per_hr": 0.0031,
+    "app_switches_per_hr": 0.0028,
+    "output_per_focus_hr": 0.0025,
+    "task_value": 0.0016,
+    "input_to_output_ratio": 0.0011,
+    "switch_to_output": 0.001,
+    "productive_app_pct": 0.001
+  }
+}

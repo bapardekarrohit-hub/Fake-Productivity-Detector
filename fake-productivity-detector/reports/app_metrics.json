@@ -1,0 +1,70 @@
+{
+  "best_model": "Gradient Boosting",
+  "n_rows": 8000,
+  "n_train": 6400,
+  "n_test": 1600,
+  "cv": [
+    {
+      "model": "Ridge Regression",
+      "cv_mae": 6.07,
+      "cv_r2": 0.8801
+    },
+    {
+      "model": "Random Forest",
+      "cv_mae": 3.448,
+      "cv_r2": 0.964
+    },
+    {
+      "model": "Gradient Boosting",
+      "cv_mae": 3.323,
+      "cv_r2": 0.9665
+    }
+  ],
+  "test": {
+    "mae": 3.286,
+    "r2": 0.9665,
+    "category_accuracy": 0.9125,
+    "category_macro_f1": 0.9149
+  },
+  "categories": [
+    "Fake Productivity",
+    "Moderately Productive",
+    "Highly Productive"
+  ],
+  "confusion_matrix": [
+    [
+      472,
+      40,
+      0
+    ],
+    [
+      39,
+      550,
+      24
+    ],
+    [
+      0,
+      37,
+      438
+    ]
+  ],
+  "feature_importance": {
+    "tasks_completed": 7.713,
+    "tasks_per_task_hour": 5.93,
+    "productive_ratio": 5.855,
+    "social_hours": 0.473,
+    "idle_hours": 0.183,
+    "breaks_per_hour": 0.113,
+    "social_ratio": 0.101,
+    "total_hours": 0.063
+  },
+  "class_distribution": {
+    "Fake Productivity": 2558,
+    "Moderately Productive": 3068,
+    "Highly Productive": 2374
+  },
+  "thresholds": {
+    "fake_below": 50,
+    "highly_from": 80
+  }
+}

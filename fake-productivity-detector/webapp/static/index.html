@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake Productivity Detector</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- ============ LOGIN ============ -->
+  <div id="login-view" class="login-wrap" hidden>
+    <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+    <form id="login-card" class="login-card" autocomplete="on">
+      <div class="logo-lg" id="logo-lg"></div>
+      <h1 class="login-title">Fake Productivity<br>Detector</h1>
+      <p class="login-sub">Analyze your activity and discover your true productivity</p>
+      <div class="tabs">
+        <button type="button" class="tab active" data-tab="user">Username Login</button>
+        <button type="button" class="tab" data-tab="google">Google Login</button>
+      </div>
+      <div id="tab-user">
+        <label class="lbl" for="lg-user">Username</label>
+        <div class="input-icon"><span class="ico" data-icon="user"></span>
+          <input id="lg-user" name="username" placeholder="Enter your username" autocomplete="username" required></div>
+        <label class="lbl" for="lg-pass">Password</label>
+        <div class="input-icon"><span class="ico" data-icon="lock"></span>
+          <input id="lg-pass" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <button type="button" class="eye" id="toggle-pass" aria-label="Show password"><span class="ico" data-icon="eye"></span></button></div>
+        <div id="login-error" class="form-error" role="alert"></div>
+        <button class="btn btn-primary btn-block" id="login-submit" type="submit"><span class="ico" data-icon="user"></span><span id="login-submit-text">Sign In</span></button>
+        <p class="switch-mode"><span id="mode-q">New here?</span> <a href="#" id="mode-toggle">Create account</a></p>
+        <p class="hint">Demo account: <b>demo</b> / <b>demo12345</b></p>
+      </div>
+      <div id="tab-google" hidden>
+        <div class="notice">Google sign-in needs OAuth credentials from Google Cloud and is not configured in this build. Use the username login for now.</div>
+      </div>
+      <p class="login-foot">Academic Project &bull; Data Science &amp; Web Technologies</p>
+    </form>
+  </div>
+
+  <!-- ============ APP ============ -->
+  <div id="app-view" class="app" hidden>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" id="logo-sm"></div>
+        <div class="brand-text"><b>FPD</b><small>Productivity</small></div>
+        <button class="icon-btn" id="menu-btn" aria-label="Toggle sidebar"><span class="ico" data-icon="menu"></span></button>
+      </div>
+      <div class="user-chip"><div class="avatar" id="chip-avatar">R</div>
+        <div class="user-text"><b id="chip-name">user</b><small>Active User</small></div></div>
+      <nav id="nav"></nav>
+      <button class="logout" id="logout-btn"><span class="ico" data-icon="logout"></span><span class="nav-label">Logout</span></button>
+    </aside>
+    <main>
+      <header class="page-head card"><div><h2 id="page-title"></h2><p id="page-sub"></p></div><div id="page-actions"></div></header>
+      <section id="page"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>
